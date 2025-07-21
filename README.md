@@ -20,3 +20,14 @@ This is a simple starter application built with [Mojolicious::Lite](https://mojo
 Start the application:
 ```bash
 perl my_mojo_app.pl daemon
+
+
+
+## Updates in Laravel Project
+1. Added ApiController
+Created a new controller: App\Http\Controllers\ApiController.
+Added a method fetchData() that returns a JSON response:
+2. Registered Route
+Added a route in routes/web.php to handle requests to /fetch-data:
+3. Tested Endpoint
+The endpoint http://127.0.0.1:8000/fetch-data was tested and returns the expected JSON response.
