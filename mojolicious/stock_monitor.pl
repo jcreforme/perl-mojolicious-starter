@@ -1,9 +1,13 @@
 #!/usr/bin/env perl
 use Mojolicious::Lite;
 use Mojo::UserAgent;
+use Dotenv;
+
+# Load environment variables from .env file
+Dotenv->load('../.env');
 
 # Alpha Vantage API key
-my $api_key = '1FO6EJAG9YA9PHY9';
+my $api_key = $ENV{'API_KEY'} || die "API key not found in environment";
 
 # UserAgent for API requests
 my $ua = Mojo::UserAgent->new;
